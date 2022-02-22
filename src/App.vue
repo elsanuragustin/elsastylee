@@ -1,12 +1,21 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <navigasi />
+
     <router-view/>
   </div>
 </template>
+
+<script>
+import navigasi from "./components/navigasi.vue"
+export default {
+  components:{
+    navigasi,
+  },
+
+  
+};
+</script>
 
 <style>
 #app {
@@ -30,3 +39,5 @@
   color: #42b983;
 }
 </style>
+
+ 

@@ -1,7 +1,6 @@
 <template>
     <div>
         <h1>newArrival</h1>
-        <div class="text-muted" v-if="loading"> sedang memuat... </div>
          <div class="row">
             <div class="col-md-4" v-for="produk in products" :key="produk.id">
             <div class="card-header">
@@ -21,7 +20,6 @@ export default {
     data(){
         return{
             products: "",
-            loadinng: true,
         };
     },
     method(){
@@ -33,7 +31,6 @@ export default {
 
             if (data) {
                 this.products = data;
-                this.loadinng = false; // sembunyikan tulisan loading.. :D
             }
             if (error) console.error(error);
         },
